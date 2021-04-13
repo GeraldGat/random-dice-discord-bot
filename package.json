@@ -1,0 +1,14 @@
+{
+  "name": "randomdice",
+  "version": "1.0.0",
+  "description": "Un bot de lancé de dé non truqué",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "discord.js": "^12.5.3"
+  }
+}
