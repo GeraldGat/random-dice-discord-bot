@@ -29,7 +29,7 @@ client.on("message", function (message) {
         // On effectue nos lancés
         rolls = [];
         for(var i = 0; i < diceAmount; i++)
-            rolls.push(Math.ceil(Math.random() * diceType))
+            rolls.push(Math.floor(Math.random() * diceType) + 1)
 
         lance += `\n${diceAmount}d${diceType} => [(${rolls.join(' ')})]`
     })
