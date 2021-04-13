@@ -3,6 +3,7 @@ const client = new Discord.Client();
 
 //Toutes les actions à faire quand le bot se connecte
 client.on("ready", function () {
+    console.log('Bot lancé')
 })
 
 // Répondre à un message
@@ -34,7 +35,18 @@ client.on("message", function (message) {
         lance += `\n${diceAmount}d${diceType} => [(${rolls.join(' ')})]`
     })
 
-    message.channel.send(`**From <@${message.author.id}>**\n\`\`\`${lance}\`\`\``)
+    if(`**From <@${message.author.id}>**\n\`\`\`${lance}\`\`\``.length < 2000) {
+        message.channel.send(`**From <@${message.author.id}>**\n\`\`\`${lance}\`\`\``)
+    } else {
+        var fs = require('fs');
+
+        fs.writeFile('./output.txt', lance, function (err) {
+            if (err) throw err;
+            console.log('Saved!');
+        });
+
+        message.channel.send(`**From <@${message.author.id}>**`, { files: ['./output.txt'] })
+    }
 })
 
-client.login(process.env.TOKEN);
+client.login('ODMxMjgyMDk4NDYyNTIzNDYy.YHS9yA.TsBSe-aysrMV_LcrnIFHJWiMT-8');
