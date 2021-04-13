@@ -37,4 +37,4 @@ client.on("message", function (message) {
     message.channel.send(`**From <@${message.author.id}>**\n\`\`\`${lance}\`\`\``)
 })
 
-client.login("ODMxMjgyMDk4NDYyNTIzNDYy.YHS9yA.g7R4NMdN5MHXY_Huz-sKMMbnaFs");
+client.login("ODMxMjgyMDk4NDYyNTIzNDYy.YHS9yA.gCSTxh8qiH3_IksGXLPEfm0Kp_Q");
