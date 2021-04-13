@@ -37,4 +37,4 @@ client.on("message", function (message) {
     message.channel.send(`**From <@${message.author.id}>**\n\`\`\`${lance}\`\`\``)
 })
 
-client.login("ODMxMjgyMDk4NDYyNTIzNDYy.YHS9yA.gCSTxh8qiH3_IksGXLPEfm0Kp_Q");
+client.login(process.env.TOKEN);
