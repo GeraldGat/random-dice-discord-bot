@@ -8,6 +8,9 @@ client.on("ready", function () {
 
 // Répondre à un message
 client.on("message", function (message) {
+    // On empêche les réponses pour les autres bot 
+    if(message.author.bot) return
+    
     // On récupère tous les textes correspondant à !XdX
     msgs = message.content.match(/![0-9]*d[0-9]*/gm)
 
