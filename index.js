@@ -12,7 +12,7 @@ client.on("message", function (message) {
     if(message.author.bot) return
     
     // On récupère tous les textes correspondant à !XdX
-    msgs = message.content.match(/![0-9]*d[0-9]*/gm)
+    msgs = message.content.match(/![0-9]*d[0-9]+/gm)
 
     // Si aucun texte de correspond, on sort de la function
     if(msgs == null)
