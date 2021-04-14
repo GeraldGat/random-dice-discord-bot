@@ -25,10 +25,10 @@ client.on("message", function (message) {
         msg = e.slice(1)
         // On sépare notre chaine en deux afin d'avoir le nombre de dé et le type de dé
         msg = msg.split('d')
-        var diceAmount = msg[0] 
-        var diceType = msg[1]
+        var diceAmount = parseInt(msg[0])
+        var diceType = parseInt(msg[1])
         // Si le nombre de dé n'a pas été pricisé on le set à 1
-        if(diceAmount == '')
+        if(isNaN(diceAmount))
             diceAmount = 1
         // On effectue nos lancés
         rolls = [];
